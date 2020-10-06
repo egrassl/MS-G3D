@@ -157,7 +157,7 @@ def gendata(file_list, out_path, ignored_sample_path, benchmark, part):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='NTU-RGB-D 120 Skeleton Data Extraction')
-    parser.add_argument('--part1-path', default='../data/nturgbd_raw/nturgb+d_skeletons/')
+    parser.add_argument('--part1-path', default='../data/nturgbd_raw/nturgb+d_skeletons120/')
     parser.add_argument('--part2-path', default='../data/nturgbd_raw/nturgb+d_skeletons120/')
     parser.add_argument('--ignored-sample-path',
                         default='../data/nturgbd_raw/NTU_RGBD120_samples_with_missing_skeletons.txt')

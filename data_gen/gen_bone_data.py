@@ -19,6 +19,10 @@ bone_pairs = {
     'ntu120/xsub': ntu_skeleton_bone_pairs,
     'ntu120/xset': ntu_skeleton_bone_pairs,
 
+    # NTU HOME uses the same skeleton structure as NTU 60
+    'ntuhome/xsub': ntu_skeleton_bone_pairs,
+    'ntuhome/xset': ntu_skeleton_bone_pairs,
+
     'kinetics': (
         (0, 0), (1, 0), (2, 1), (3, 2), (4, 3), (5, 1), (6, 5), (7, 6), (8, 2), (9, 8), (10, 9),
         (11, 5), (12, 11), (13, 12), (14, 0), (15, 0), (16, 14), (17, 15)
@@ -28,6 +32,7 @@ bone_pairs = {
 benchmarks = {
     'ntu': ('ntu/xview', 'ntu/xsub'),
     'ntu120': ('ntu120/xset', 'ntu120/xsub'),
+    'ntuhome': ('ntuhome/xset', 'ntuhome/xsub'),
     'kinetics': ('kinetics',)
 }
 
@@ -35,8 +40,8 @@ parts = { 'train', 'val' }
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Bone data generation for NTU60/NTU120/Kinetics')
-    parser.add_argument('--dataset', choices=['ntu', 'ntu120', 'kinetics'], required=True)
+    parser = argparse.ArgumentParser(description='Bone data generation for NTU60/NTU120/NTUHOME/Kinetics')
+    parser.add_argument('--dataset', choices=['ntu', 'ntu120', 'ntuhome', 'kinetics'], required=True)
     args = parser.parse_args()
 
     for benchmark in benchmarks[args.dataset]:

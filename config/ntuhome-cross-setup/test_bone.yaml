@@ -1,7 +1,7 @@
 # feeder
 feeder: feeders.feeder.Feeder
 test_feeder_args:
-  data_path: ./data/ntuhome/xset/val_data_joint.npy
+  data_path: ./data/ntuhome/xset/val_data_bone.npy
   label_path: ./data/ntuhome/xset/val_label.pkl
   debug: False
 
@@ -19,7 +19,7 @@ model_args:
 phase: test
 device: [0]
 test_batch_size: 32
-weights: ./pretrained_models/ntuhome_xset_joint.pt
+weights: ./pretrained_models/ntuhome_xset_bone.pt
 
-work_dir: ./eval/ntuhome/xset/joint/
+work_dir: ./eval/ntuhome/xset/bone/
 save_score: True
